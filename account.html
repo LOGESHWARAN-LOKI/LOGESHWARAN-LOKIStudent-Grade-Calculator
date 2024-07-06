@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#1 HTML Login Form</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+    <div id="form_wrapper">
+        <div id="form_left">
+            <img src="men.png" alt="computer icon">
+        </div>
+        <div id="form_right">
+            <h1 style="color: azure;">Member Registration</h1>
+            <form action="index.html" id="registration_form">
+                <div class="input_container">
+                    <i class="fas fa-envelope"></i>
+                    <input placeholder="Email" type="email" name="Email" id="field_email" class='input_field' required>
+                </div><br><br>
+                <div class="input_container">
+                    <i class="fas fa-lock"></i>
+                    <input placeholder="Password" type="password" name="Password" id="field_password"
+                        class='input_field' required>
+                </div><br><br>
+                <div class="input_container">
+                    <i class="fas fa-phone"></i>
+                    <input placeholder="Phone Number" type="tel" name="PhoneNumber" id="field_phone"
+                        class='input_field'>
+                </div><br><br>
+                <input type="submit" value="Register" id="input_submit" class="submit_btn">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registration_form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Display alert message
+            alert('Your account created successfully');
+
+            // Navigate to demo.html after displaying the alert
+            window.location.href = this.action;
+        });
+    </script>
+</body>
+</html>
+
